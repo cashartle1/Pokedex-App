@@ -2,6 +2,7 @@ let myName = 'Bob';
 document.write(myName);
 myName = 'John Doe';
 document.write(myName);
+alert('Hello World!');
 
 let simpleAddition = 2+6;
 document.write(simpleAddition);
