@@ -1,4 +1,3 @@
-alert('Hello World!');
 //this array will contain Pokemon data to be displayed
 let pokemonList = [
     {name: 'Bulbasaur', height: 2, type: ['grass' , 'poison']},
@@ -7,5 +6,3 @@ let pokemonList = [
 ];
 
 
-let favoriteFood = 'Gnocchi & Sausage'
-document.write(favoriteFood);
