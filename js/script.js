@@ -2,7 +2,8 @@
 let pokemonList = [
     {name: 'Bulbasaur', height: 2, type: ['grass' , 'poison']},
     {name: 'Zapdos', height: 5, type: ['electric' , 'flying']},
-    {name: 'Articuno', height: 5, type: ['ice' , 'flying']}
+    {name: 'Articuno', height: 5, type: ['ice' , 'flying']},
+    {name: 'Dragonite', height: 7, type: ['dragon', 'flying']}
 ];
 
 
