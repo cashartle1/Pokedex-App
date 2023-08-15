@@ -1,17 +1,41 @@
-//this array contains Pokemon data to be displayed
-let pokemonList = [
-    {name: 'Bulbasaur', height: 2, type: ['grass' , 'poison']},
-    {name: 'Zapdos', height: 5, type: ['electric' , 'flying']},
-    {name: 'Articuno', height: 5, type: ['ice' , 'flying']},
-    {name: 'Dragonite', height: 7, type: ['dragon', 'flying']}
-];
+let pokemonRepository = (function () {
+    //this array contains Pokemon data to be displayed
+    let pokemonList = [
+        {name: 'Bulbasaur', 
+        height: 2, 
+        type: ['grass' , 'poison']
+        },
+        {name: 'Ivysaur',
+        height: 3,
+        type: ['grass' , 'poison']
+        },
+        {name: 'Venusaur',
+        height: 6.5,
+        type: ['grass' , 'poison']
+        },
+        {name: 'Charmander',
+        height: 2,
+        type: ['fire']
+        }
+    ];
 
-// loop to display pokemon list
-for (let i = 0; i < pokemonList.length; i++) 
-    if(pokemonList[i].height < 5) {
-        document.write ( '<p>' + pokemonList[i].name + ' - height (ft): ' + pokemonList[i].height)
-    }else if (pokemonList[i].height >= 5) {  
-        // conditional to highlight big pokemon
-        document.write ('<p>' + pokemonList[i].name + ' - height (ft): ' + pokemonList[i].height + ' ...Wow, that\'s a big Pokemon!'); 
+    function add(pokemon) {
+        if (typeof pokemon === typeof pokemonList){
+        pokemonList.push(pokemon);
+        console.log(Object.keys(pokemonList))
+        }
+
+    }    
+
+    function getAll() {
+        return pokemonList ;
+    }
+
+    return {
+        add: add,
+        getAll: getAll
+    };
+
+})();
     }
 
