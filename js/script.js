@@ -20,9 +20,15 @@ let pokemonRepository = (function () {
     ];
 
     function add(pokemon) {
-        if (typeof pokemon === typeof pokemonList){
-        pokemonList.push(pokemon);
-        console.log(Object.keys(pokemonList))
+        //check new add is formated correctly before adding to repository
+        if (typeof pokemon === 'object' &&
+            'name' in pokemon &&
+            'height' in pokemon &&
+            'type' in pokemon 
+            ){
+        repository.push(pokemon);
+        } else {
+            console.log('pokemon is not correct');
         }
 
     }    
