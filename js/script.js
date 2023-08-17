@@ -1,6 +1,6 @@
 let pokemonRepository = (function () {
     //this array contains Pokemon data to be displayed
-    let pokemonList = [
+    let repository = [
         {name: 'Bulbasaur', 
         height: 2, 
         type: ['grass' , 'poison']
@@ -30,11 +30,10 @@ let pokemonRepository = (function () {
         } else {
             console.log('pokemon is not correct');
         }
-
     }    
 
     function getAll() {
-        return pokemonList ;
+        return repository ;
     }
 
     return {
