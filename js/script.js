@@ -88,13 +88,8 @@ console.log(pokemonRepository.getAll());
 
 //forEach loop to display pokemon list
 pokemonRepository.getAll().forEach(function(pokemon) {
-    let pokemonDetails = '<p>' + pokemon.name + ", height: " + pokemon.height +'ft. ';
-    if (pokemon.height > 5) {
-        pokemonDetails += '...Wow, that\'s a big Pokemon!';  
-    }
-
-    document.write ( pokemonDetails + '<br>'); 
+    pokemonRepository.addListItem(pokemon);
 });
 
-console.log(pokemonRepository.getAll());
+
 
