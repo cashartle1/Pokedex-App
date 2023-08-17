@@ -36,9 +36,42 @@ let pokemonRepository = (function () {
         return repository ;
     }
 
+    function addListItem(pokemon){
+        // new variable pokemonList
+        let pokemonList = document.querySelector('.pokemon-list');
+
+        //new li element
+        let listPokemon = document.createElement('li');
+
+        //create button for pokedex with pokemon name
+        let button = document.createElement('button');
+        button.innerText = pokemon.name;
+
+        //adds button class
+        button.classList.add("button-class");
+
+        //append button
+        listPokemon.appendChild(button);
+
+        //append listPokemon
+        pokemonList.appendChild(listPokemon);
+
+        //add click event listener to button
+        button.addEventListener('click', function(event) {
+            showDetails(pokemon);
+        })
+    }
+
+    //call this function when button is clicked
+    function showDetails(pokemon) {
+        console.log(pokemon);
+    }
+
+
     return {
         add: add,
-        getAll: getAll
+        getAll: getAll,
+        addListItem: addListItem
     };
 
 })();
@@ -50,6 +83,8 @@ pokemonRepository.add({name: 'Squirtle', height: 1.5, type: 'water'});
 pokemonRepository.add({name: 'Wartortle', height: 3, type: 'water'});
 pokemonRepository.add({name: 'Blastoise', height: 5, type: 'water'});
 pokemonRepository.add({name: 'Caterpie', height: 1, type: 'bug'});
+
+console.log(pokemonRepository.getAll());
 
 //forEach loop to display pokemon list
 pokemonRepository.getAll().forEach(function(pokemon) {
