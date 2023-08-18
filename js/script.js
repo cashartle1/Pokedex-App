@@ -2,6 +2,9 @@ let pokemonRepository = (function () {
     //this array contains Pokemon data to be displayed
     let pokemonList = [];
 
+    //api link
+    let apiURL = 'https://pokeapi.co/api/v2/pokemon/?limit=150';
+
     function add(pokemon) {
         //check new add is formated correctly before adding to repository
         if (typeof pokemon === 'object' &&
