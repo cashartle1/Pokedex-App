@@ -66,6 +66,26 @@ let pokemonRepository = (function () {
         })
     }
 
+    function loadDetails(item) {
+        let url = item.detailsUrl;
+        return fetch(url).then(function (response) {
+            return response.json();
+        }).then(function (details) {
+            //add the details to the item
+            item.imageUrl = details.sprites.front_default;
+            item.height = details.height;
+            item.types = details.types;
+        }).catch(function (e) {
+            console.error(e);
+        });
+      }
+    //call this function when button is clicked. get pokemon details from sever
+    function showDetails(pokemon) {
+        loadDetails(pokemon).then(function () {
+            //pokemon details log to console when button clicked
+            console.log(pokemon); 
+        });       
+    }
 
     return {
         add: add,
