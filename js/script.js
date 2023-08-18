@@ -79,6 +79,7 @@ let pokemonRepository = (function () {
             console.error(e);
         });
       }
+
     //call this function when button is clicked. get pokemon details from sever
     function showDetails(pokemon) {
         loadDetails(pokemon).then(function () {
@@ -100,9 +101,10 @@ let pokemonRepository = (function () {
 
 console.log(pokemonRepository.getAll());
 
-//forEach loop to display pokemon list
-pokemonRepository.getAll().forEach(function(pokemon) {
-    pokemonRepository.addListItem(pokemon);
+pokemonRepository.loadList().then(function () {
+    pokemonRepository.getAll().forEach(function(pokemon) {
+        pokemonRepository.addListItem(pokemon);
+    });
 });
 
 
