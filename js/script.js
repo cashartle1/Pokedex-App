@@ -1,23 +1,6 @@
 let pokemonRepository = (function () {
     //this array contains Pokemon data to be displayed
-    let repository = [
-        {name: 'Bulbasaur', 
-        height: 2, 
-        type: ['grass' , 'poison']
-        },
-        {name: 'Ivysaur',
-        height: 3,
-        type: ['grass' , 'poison']
-        },
-        {name: 'Venusaur',
-        height: 6.5,
-        type: ['grass' , 'poison']
-        },
-        {name: 'Charmander',
-        height: 2,
-        type: ['fire']
-        }
-    ];
+    let pokemonList = [];
 
     function add(pokemon) {
         //check new add is formated correctly before adding to repository
