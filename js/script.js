@@ -98,14 +98,6 @@ let pokemonRepository = (function () {
 
 })();
 
-//add the following pokemon to pokemonList
-pokemonRepository.add({name: 'Charmeleon', height: 3.5, type: 'fire'});
-pokemonRepository.add({name: 'Charizard', height: 5.5, type: ['fire', 'flying']});
-pokemonRepository.add({name: 'Squirtle', height: 1.5, type: 'water'});
-pokemonRepository.add({name: 'Wartortle', height: 3, type: 'water'});
-pokemonRepository.add({name: 'Blastoise', height: 5, type: 'water'});
-pokemonRepository.add({name: 'Caterpie', height: 1, type: 'bug'});
-
 console.log(pokemonRepository.getAll());
 
 //forEach loop to display pokemon list
