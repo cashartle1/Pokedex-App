@@ -8,18 +8,17 @@ let pokemonRepository = (function () {
     function add(pokemon) {
         //check new add is formated correctly before adding to repository
         if (typeof pokemon === 'object' &&
-            'name' in pokemon &&
-            'height' in pokemon &&
-            'type' in pokemon 
+            "name" in pokemon &&
+            "detailsUrl" in pokemon
             ){
-        repository.push(pokemon);
+        pokemonList.push(pokemon);
         } else {
             console.log('pokemon is not correct');
         }
     }    
 
     function getAll() {
-        return repository ;
+        return pokemonList ;
     }
 
     function addListItem(pokemon){
@@ -106,6 +105,5 @@ pokemonRepository.loadList().then(function () {
         pokemonRepository.addListItem(pokemon);
     });
 });
-
 
 
