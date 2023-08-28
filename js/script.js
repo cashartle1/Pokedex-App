@@ -29,7 +29,7 @@ let pokemonRepository = (function () {
         let listPokemon = document.createElement('li');
 
         //add new list class
-        listPokemon.classList.add("list-group-item");
+        listPokemon.classList.add("list-group-item", "col");
 
         //create button for pokedex with pokemon name
         let button = document.createElement('button');
