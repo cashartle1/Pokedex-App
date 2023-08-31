@@ -1,6 +1,6 @@
 # Pokémon List Web Application
 
-## Project Description
+### Project Description
 
 This project is a user-friendly, simple web application using HTML, CSS, and JavaScript that displays a list of Pokémon from an external API while utilizing jQuery & bootstrap. These together will load the Pokémon list & allow users to browse and view more detailed information about each Pokémon. 
 
@@ -11,11 +11,12 @@ This project is a user-friendly, simple web application using HTML, CSS, and Jav
 
 ### Technologies Used in Project
 
-- **HTML**: To create the structure of the application.
-- **CSS & Bootstrap**: To create the design & overall style of the application.
-- **JavaScript**: To provide functionality
-- **jQuery**: Paired with Javascript to manage interactivity and create a more seamless functionality 
-- **API**: To load the Pokémon data from an external API via fetch
+* HTML
+* CSS
+* Bootstrap
+* JavaScript
+* jQuery
+* API
 
 ### Dependency
 * Bootstrap - [v5.3](https://getbootstrap.com/docs/5.3/getting-started/introduction/)
@@ -28,3 +29,5 @@ This project is a user-friendly, simple web application using HTML, CSS, and Jav
 ### API Used:
 * PokéAPI: https://pokeapi.co/
 
+### Link to App: 
+* cashartle.github.io/Pokedex-App
